@@ -62,9 +62,6 @@ Check out the published Power BI dashboard here: [View Dashboard]
 ## Dashboard Preview
 ![image](https://github.com/user-attachments/assets/b2566f7f-3f0a-48e6-9bed-7327d2ff8b1c)
 
-![Dashboard Picture](https://photos.app.goo.gl/W7Za9qV27bRLsUrP9)
-
-
 
 ## Contributing
 Pull requests are welcome!  
