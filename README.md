@@ -54,6 +54,25 @@ To run skill or salary analysis manually:
 - **Work Type Trends**: Analyze full-time, contract, intern roles globally.
 
 
+## 📁 Project Structure
+
+```bash
+employability-analytics/
+├── data/                         # Contains the sampled_job_descriptions dataset (CSV/Excel)
+├── visuals/                      # Power BI report files (.pbix) and image previews
+├── docs/                         # Reports, roadmap, design documents, and deliverables
+├── analysis/                     # Python scripts or Jupyter notebooks for extra analysis
+├── src/                          # Source code (if any backend logic is added)
+│   ├── __init__.py
+│   ├── preprocessing.py          # Data cleaning and preprocessing logic
+│   ├── skill_analysis.py         # Skill gap and qualification matching logic
+├── dashboard.html                # (Optional) Embedded Power BI Dashboard for GitHub Pages
+├── requirements.txt              # Python dependencies (if applicable)
+├── README.md                     # Project overview and usage guide
+└── LICENSE                       # Project license (MIT)
+```
+
+
 ## Live Dashboard
 Check out the published Power BI dashboard here: [View Dashboard]
 
