@@ -28,10 +28,10 @@ The dashboard is built using **Microsoft Power BI**. Python and Excel were used 
 
 | Member Name | Contribution |
 |-------------|--------------|
-| Rithvik     | Data cleaning, dashboard creation, visuals configuration, location mapping, final submission |
-| [Team Member 2] | Skill extraction, job title parsing, traceability matrix |
-| [Team Member 3] | Data modeling, Power BI integration, visuals validation |
-| [Team Member 4] | User interface design, testing, feedback incorporation |
+| Gunda Sai Jayanth, Lahari Gurram   | Data cleaning, dashboard creation, visuals configuration, location mapping, final submission |
+| Sai Rahul Brahmadevara | Skill extraction, job title parsing, traceability matrix |
+| Supraja | Data modeling, Power BI integration, visuals validation |
+| Alankritha | User interface design, testing, feedback incorporation |
 
 ---
 
@@ -131,4 +131,4 @@ Tools used:
 
 ## 📩 Contact
 
-For any clarifications or issues, please contact: `example@gmail.com`
+For any clarifications or issues, please contact: `examplegundasaijayanth@gmail.com`
