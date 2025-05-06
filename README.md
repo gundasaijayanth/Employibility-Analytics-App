@@ -1,97 +1,134 @@
+# Employability Analytics Dashboard - ReadMe
 
-# Employability Analytics Application  
-**A Power BI Dashboard for Career Insight, Skill Gap Detection, and Salary Benchmarking**
+## 📌 Table of Contents
+1. [Project Overview](#project-overview)
+2. [Team Members and Contributions](#team-members-and-contributions)
+3. [Data Sources and Processing](#data-sources-and-processing)
+4. [Installation and Setup Instructions](#installation-and-setup-instructions)
+5. [Dashboard Features](#dashboard-features)
+6. [Screenshots Description](#screenshots-description)
+7. [Traceability Matrix](#traceability-matrix)
+8. [Submission Checklist](#submission-checklist)
+
+---
+
+## 🧠 Project Overview
+
+This project aims to build an **Employability Analytics Dashboard** that enables users to:
+- Analyze job market trends across various IT roles and global locations.
+- Evaluate average experience, salary, and work types.
+- Compare country-wise salary expectations and role-specific compensation.
+- Explore skill demands, qualifications, and application insights interactively.
+
+The dashboard is built using **Microsoft Power BI**. Python and Excel were used to validate, clean, and transform the original datasets.
+
+---
+
+## 👥 Team Members and Contributions
+
+| Member Name | Contribution |
+|-------------|--------------|
+| Rithvik     | Data cleaning, dashboard creation, visuals configuration, location mapping, final submission |
+| [Team Member 2] | Skill extraction, job title parsing, traceability matrix |
+| [Team Member 3] | Data modeling, Power BI integration, visuals validation |
+| [Team Member 4] | User interface design, testing, feedback incorporation |
+
+---
+
+## 📊 Data Sources and Processing
+
+We used a base dataset `final_it_job_descriptions.csv` and processed it to:
+- Normalize job skills and extract individual skills
+- Clean salary range to extract min, max, and average values using DAX
+- Generate lat-long based on city and country using random values (aligned to country boundaries)
+- Create multiple job listings for USA and other countries with logical variations
+
+Tools used:
+- Python (Pandas, Faker, NumPy)
+- Excel (formulas and filtering)
+- Power BI (DAX for column transformation)
+
+---
+
+## 🛠️ Installation and Setup Instructions
+
+1. Ensure **Power BI Desktop** is installed.
+2. Open the provided `.pbix` file: `Employability_Analytics.pbix`
+3. Make sure all data files are in the same folder:
+   - `final_it_job_descriptions.csv`
+4. Use the "Transform Data" button to refresh or adjust queries.
+
+---
+
+## 🌐 Dashboard Features
+
+### 🔍 Page 1: Job Market Overview
+- KPIs: Total Jobs Posted, Unique Roles, Avg Experience, Active Companies
+- Tree map: Count of Job Id by Role
+- Bar chart: Experience band breakdown
+- Pie chart: Work type and Qualification distribution
+
+<img width="1238" alt="Overview Page" src="https://github.com/user-attachments/assets/ec3a3b35-511a-48e3-b62e-8349543655f5" />
+
+### 📈 Page 2: Skills Insights
+- Word cloud of in-demand skills
+- Role vs number of jobs
+- Qualifications by job count
+- Table of Job Titles and Skills
+
+<img width="1238" alt="skill insights page" src="https://github.com/user-attachments/assets/ef011751-4833-4eff-8ee7-c79bae991d89" />
+
+### 💰 Page 3: Salary and Location
+- Top 5 high-paying roles
+- Avg Salary by Experience
+- Salary by Country
+- World map with job markers
+
+<img width="1238" alt="salary and location page" src="https://github.com/user-attachments/assets/46f1dce0-169e-40cd-8984-aa8dc4a85999" />
 
 
+### 🔍 Page 4: Application Explorer
+- Drill-down table by job title
+- Filters: Role, Salary Range, Job Portal, Skills
+- KPIs for matched roles
 
-## Project Description
+<img width="1238" alt="application explorer" src="https://github.com/user-attachments/assets/17b81fc6-5d02-4f14-bdcf-e53f496b8e9c" />
 
-The Employability Analytics Application helps job seekers and career advisors analyze job market trends, identify skill gaps, and make informed career decisions. Built using Power BI and driven by a curated dataset of global job postings, this dashboard visualizes salary ranges, work types, roles, required skills, and geographical distribution of opportunities.
+---
 
+## 🖼️ Screenshots Description
 
+| Screenshot | Description |
+|------------|-------------|
+| Job Market Overview | High-level analytics on roles, work type, qualifications |
+| Skills Insights | Visualization of trending skills and job distributions |
+| Salary and Location | Country-wise salary maps and experience analysis |
+| Application Explorer | Role-specific drill-through with advanced filtering |
 
-## 📂 Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Live Dashboard](#live-dashboard)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+---
 
+## ✅ Traceability Matrix
 
+| Requirement | Information Needed | Visual/Feature Used | Validation Method |
+|-------------|--------------------|---------------------|--------------------|
+| Track Job Roles by Work Type | Role, Work Type | Bar chart (Role vs Work Type) | Cross-filter check, visual match |
+| Salary Trends by Country | Country, Salary Range | Salary by Country bar chart | Filter country, compare table with bar |
+| Skill Demands | Skills column | Word Cloud & Skills table | Check skill match in Job Description |
+| Location Mapping | City, Country | Latitude-Longitude Map | Compare geo plots with city |
+| Application Filtering | Role, Portal, Skills | Application Explorer Page | Drill-through and filtering validation |
 
-## Installation
+---
 
-No code installation required for the Power BI Dashboard. However, to explore or modify the dataset:
+## 📦 Submission Checklist
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/employability-analytics.git
-cd employability-analytics
-```
+- ✅ final_it_job_descriptions.csv
+- ✅ Employability_Analytics.pbix
+- ✅ README.md (this file)
+- ✅ Screenshot folder (JobMarketOverview.png, SkillsInsights.png, etc.)
+- ✅ Any supporting Python/Excel files for data transformation
 
+---
 
-## Usage
-To explore the Power BI dashboard:
-```bash
-Open Power BI Desktop → Import the dataset (.csv) → Load visuals and explore filters.
-```
-To run skill or salary analysis manually:
+## 📩 Contact
 
--   Use Python scripts or Excel formulas (included in `/scripts` or `/analysis-tools` folder).
-
-
-## Features
--   **Skill Gap Analysis**: Compare user skills with job requirements.
-    
--   **Salary Benchmarking**: View salary trends across roles and countries.
-    
--  **Career Mapping**: Identify roles that match qualifications and experience.
-    
--  **Location-Based Insights**: Discover job density using geographic mapping.
-    
-- **Work Type Trends**: Analyze full-time, contract, intern roles globally.
-
-
-## 📁 Project Structure
-
-```bash
-employability-analytics/
-├── data/                         # Contains the sampled_job_descriptions dataset (CSV/Excel)
-├── visuals/                      # Power BI report files (.pbix) and image previews
-├── docs/                         # Reports, roadmap, design documents, and deliverables
-├── analysis/                     # Python scripts or Jupyter notebooks for extra analysis
-├── src/                          # Source code (if any backend logic is added)
-│   ├── __init__.py
-│   ├── preprocessing.py          # Data cleaning and preprocessing logic
-│   ├── skill_analysis.py         # Skill gap and qualification matching logic
-├── dashboard.html                # (Optional) Embedded Power BI Dashboard for GitHub Pages
-├── requirements.txt              # Python dependencies (if applicable)
-├── README.md                     # Project overview and usage guide
-└── LICENSE                       # Project license (MIT)
-```
-
-
-## Live Dashboard
-Check out the published Power BI dashboard here: [View Dashboard]
-
-
-
-## Dashboard Preview
-![image](https://github.com/user-attachments/assets/6b7225db-fd6c-4488-8911-ec0138bf586b)
-
-
-## Contributing
-Pull requests are welcome!  
-For major changes, please open an issue first to discuss your proposed updates.
-
-## License
-MIT License. See [LICENSE](LICENSE) for more details.
-
-## Acknowledgements
--   **Power BI** for the visualization tools
-    
--   All team members of IS-5960-03 Team 8 at Saint Louis University
-    
--   Prof. Maria Weber for her guidance and feedback
+For any clarifications or issues, please contact: `example@gmail.com`
